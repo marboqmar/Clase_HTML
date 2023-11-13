@@ -6,7 +6,7 @@
         <title>My website</title>
     </head>
     <body>
-        <div class="topBar">
+        <div class="topBar" id="topBar">
             <div class="logo">
                 <img src="./pictures/logo.PNG" alt="My logo">
             </div>
@@ -27,7 +27,7 @@
             <a href="">Portfolio</a>
         </header>
         <section>
-            <h2>About Me</h2>
+            <h3>About Me</h3>
             <p>I'm Sarah Jones, a UI/UX designer dedicated to crafting intuitive and visually stunning digital experiences. With a passion for user-centric design. I transform ideas into functional and beautiful interfaces. Let's collaborate and shape the future of design together.</p>
             <dl>
                 <dt>502</dt>
@@ -39,7 +39,7 @@
             </dl>
         </section>
         <section>
-            <h2>Services</h2>
+            <h3>Services</h3>
             <p>Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together</p>
             <ul>
                 <li>
@@ -65,7 +65,7 @@
             </ul>
         </section>
         <section>
-            <h2>My Portfolio</h2>
+            <h3>My Portfolio</h3>
             <p>Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together.</p>
             <ul>
                 <li>
@@ -107,7 +107,7 @@
             </ul>
         </section>
         <section>
-            <h2>Core Design Skills</h2>
+            <h3>Core Design Skills</h3>
             <p>I excel in essential design skills, creating visually stunning and functional digital experiences. </p>
             <ul>
                 <li>
@@ -138,7 +138,7 @@
         </section>
         <section>
             <div>
-                <h2>Get in Touch</h2>
+                <h3>Get in Touch</h3>
                 <p>Have a question or a project in mind? I'd love to hear from you. Let's chat and make something amazing together.</p>
                 <dl>
                     <dt><img src="./pictures/phone.PNG" alt="Phone"></dt>
@@ -155,23 +155,27 @@
                 <a href="">Facebook</a>
                 </div>
             </div>
-            <div>
-                <input type="text" placeholder="First name"/>
-                <input type="text" placeholder="Email"/>
-                <input type="text" placeholder="Phone number"/>
-                <input type="text" placeholder="Your message"/>
+            <form action="">
+                <label for="name">First name and surname/s</label>
+                <input id="name" type="text" placeholder="Jon Doe"/>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="jon@doe.com"/>
+                <label for="phoneNumber">Phone number</label>
+                <input id="phoneNumber" type="tel" placeholder="666 666 666"/>
+                <label for="yourMessage">Your message</label>
+                <textarea id="yourMessage" maxlength="300" cols="30" rows="10"></textarea>
                 <button>Send Message</button>
-            </div>
+            </form>
         </section>
         <footer>
-            <nav>
+            <div>
                 <a href="">About</a>
                 <a href="">Services</a>
-                <img src="./pictures/footer-logo.PNG" alt="Footer logo">
+                <a href="#topBar" alt="logo image">Footer logo</a>
                 <a href="">Portfolio</a>
                 <a href="">Blog</a>
-            </nav>
-            <p>Follow me on social media:</p>
+            </div>
+            <a href="">Follow me on social media:</a>
             <div>
                 <a href="">Twitter</a>
                 <a href="">Instagram</a>
