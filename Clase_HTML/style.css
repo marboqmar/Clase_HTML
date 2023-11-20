@@ -1,0 +1,46 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+.bg-color-pink {
+    background-color: #FFD4D0;
+}
+.color-brand-red {
+    color: red;
+}
+.h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+.p {
+    font-size: 16px;
+    font-weight: normal;
+}
+.topBar{
+    display: flex;
+}
+.nav{
+    display: flex;
+    align-items: center;
+}
+.nav--button{
+    margin-left: auto;
+    padding-right: 124px;
+}
+.section{
+
+}
+.section-black{
+
+}
+.section-pink{
+
+}
+.header--h2 {
+    font-size: 48px;
+}
+

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  padding: 4rem;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#totalPoints {
+  font-size: 4em;
+}
+
+.instructions {
+  margin-bottom: 40px;
+}
+
+.cta {
+  font-size: 1.2em;
+  border-radius: 8px;
+  padding: 18px 36px;
+  color: white;
+}
+
+.cta--start {
+  background: #2c3144;
+}
+
+.josemi {
+  user-select: none;
+  position: fixed;
+  transition: transform 0.4s, opacity 0.1s, visibility 0.1s;
+  width: fit-content;
+  height: fit-content;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.josemi img {
+  max-width: 100%;
+}
+
+.josemi--t {
+  top: 0;
+  left: 40%;
+  transform: translateY(-150%);
+}
+
+.josemi--t img {
+  transform: rotate(180deg);
+}
+
+.josemi--b {
+  bottom: 0;
+  right: 40%;
+  transform: translateY(150%);
+}
+
+.josemi--corner-tl {
+  top: 0;
+  left: 0;
+  transform: translate(-150%, -150%);
+}
+
+.josemi--corner-tl img {
+  transform: rotate(135deg);
+}
+
+.josemi--corner-bl {
+  bottom: 0;
+  left: 0;
+  transform: translate(-150%, 250%);
+}
+
+.josemi--corner-bl img {
+  transform: rotate(45deg);
+}
+
+.josemi--corner-tr {
+  top: 0;
+  right: 0;
+  transform: translate(150%, -150%);
+}
+
+.josemi--corner-tr img {
+  transform: rotate(-135deg);
+}
+
+.josemi--corner-br {
+  bottom: 0;
+  right: 0;
+  transform: translate(250%, 250%);
+}
+
+.josemi--corner-br img {
+  transform: rotate(-45deg);
+}
+
+.josemi--show {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.josemi--sm {
+  max-width: 150px;
+}
