@@ -13,7 +13,7 @@ img {
 }
 .topBar{
     display: flex;
-    margin: 40px 124px;
+    padding: 40px 124px;
 }
     .topBar__logo{
         min-width: 135px;
@@ -30,6 +30,7 @@ img {
             display: block;
             text-decoration: none;
             margin: 32px;
+            font-weight: bold;
         }
     .topBar__button{
         min-width: 127px;
@@ -43,14 +44,26 @@ img {
         display: block;
         margin-left: auto;
     }
-.header__title {
-    font-size: 20px;
-    font-weight: normal;
+.header{
+    display: flex;
+    padding: 40px 124px;
+    margin: auto;
 }
-.header__second-title {
-    font-size: 36px;
-    font-weight: bold;
-}
+    .header__title {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .header__second-title {
+        font-size: 36px;
+        font-weight: bold;
+        min-width: 300px;
+    }
+    .header__image{
+        min-width: 687px;
+        min-height: 487px;
+        max-width: 687px;
+        max-height: 487px;
+    }
 .section__paragraph {
     font-size: 16px;
     font-weight: normal;
