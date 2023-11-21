@@ -2,45 +2,58 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
 }
+img {
+    max-width: 100%;
+}
 .bg-color-pink {
     background-color: #FFD4D0;
 }
-.color-brand-red {
+.color-red {
     color: red;
-}
-.h1 {
-    font-size: 20px;
-    font-weight: bold;
-}
-.h3 {
-    font-size: 36px;
-    font-weight: bold;
-}
-.p {
-    font-size: 16px;
-    font-weight: normal;
 }
 .topBar{
     display: flex;
+    margin: 40px 124px;
 }
-.nav{
-    display: flex;
-    align-items: center;
+    .topBar__logo{
+        min-width: 135px;
+        max-width: 135px;
+    }
+    .topBar__nav{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        .topBar__nav a{
+            color: black;
+            display: block;
+            text-decoration: none;
+            margin: 32px;
+        }
+    .topBar__button{
+        min-width: 127px;
+        max-height: 48px;
+        line-height: 48px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-left: auto;
+    }
+.header__title {
+    font-size: 20px;
+    font-weight: normal;
 }
-.nav--button{
-    margin-left: auto;
-    padding-right: 124px;
+.header__second-title {
+    font-size: 36px;
+    font-weight: bold;
 }
-.section{
+.section__paragraph {
+    font-size: 16px;
+    font-weight: normal;
+}
 
-}
-.section-black{
-
-}
-.section-pink{
-
-}
-.header--h2 {
-    font-size: 48px;
-}
 
