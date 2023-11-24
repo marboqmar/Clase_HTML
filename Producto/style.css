@@ -1,0 +1,40 @@
+html{
+    color: white;
+    font-family: verdana, sans-serif;
+    font-size: 100%;
+}
+`img {
+    max-width: 100%;
+}`
+.product {
+    background-color: hsla(28, 42%, 69%, 1);
+    padding: 30px 50px;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 2px 2px 2px 1px hsl(91, 51%, 0%, 0.5);
+}
+.product__title{
+    font-family: verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: auto;
+}
+.product__price{
+    width: 70px;
+    line-height: 70px;
+    background-color: hsla(32, 100%, 53%, 1);
+    box-shadow: 2px 2px 2px 1px hsl(91, 51%, 0%, 0.5);
+    border-radius: 100%;
+    text-align: center;
+    margin: auto;
+}
+.product__button {
+    font-family: verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: darksalmon;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
