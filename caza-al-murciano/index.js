@@ -59,26 +59,43 @@ function startGame() {
   return setInterval(pickJosemi, 1000);
 }
 
+const gameTime = 4000;
+const gameTimeSeconds = gameTime / 1000;
+
 const ctaButton = document.querySelector('.cta--start');
+const timer = document.querySelector('#time')
+
 ctaButton.addEventListener('click', function () {
+  startTimer(gameTimeSeconds, timer);
   totalPointsNode.innerText = 0;
   const gameIntervalId = startGame();
   ctaButton.style.display = 'none';
+  clearInterval(fireworksIntervalId);
+
 
   setTimeout(() => {
     clearInterval(gameIntervalId);
     ctaButton.style.display = 'inline-block';
-    const container = document.querySelector('.fireworks');
-    const fireworks = new Fireworks.default(container);
-    fireworks.start();
-  }, 5000);
+    timer.style.display = 'none';
+    fireworks()
+    document.querySelector('.instructions').innerText = '¡Enhorabuena! Has acabado el juego';
+    clearInterval(timerIntervalId);
+  }, gameTime);
 });
+
+const fireworks = () => {
+  const container = document.querySelector('.fireworks');
+  const fireworks = new Fireworks.default(container);
+  fireworks.start();
+}
+
+const fireworksIntervalId = setInterval(fireworks, 1000000);
 
 const totalPointsNode = document.querySelector('#totalPoints');
 
 document.querySelectorAll('.josemi').forEach((josemiNode) => {
   josemiNode.addEventListener('click', () => {
-    const pointsToAdd = josemiNode.classList.contains('josemi--sm') ? 2 : 1; // Operadores ternarios
+    const pointsToAdd = josemiNode.classList.contains('josemi--sm') ? 2 : 1;
 
     let totalPoints = Number(totalPointsNode.innerText) + pointsToAdd;
 
@@ -92,8 +109,8 @@ document.addEventListener('mousemove', (event) => {
   const clientX = event.clientX;
   const clientY = event.clientY;
 
-  hammerNode.style.top = clientY;
-  hammerNode.style.left = clientX;
+  hammerNode.style.top = event.clientY;
+  hammerNode.style.left = event.clientX;
 });
 
 document.addEventListener('mousedown', () => {
@@ -103,3 +120,35 @@ document.addEventListener('mousedown', () => {
 document.addEventListener('mouseup', () => {
   hammerNode.classList.remove('hammer--pressed');
 });
+
+
+let timerIntervalId;
+function startTimer(duration, display) {
+  let timer = duration, minutes, seconds;
+  timerIntervalId = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+
+
+
+
+
+/*
+Hacer que los fuegos artificiales paren cuando le das a iniciar el juego otra vez (una vez haya terminado).
+Hacer que el texto cambie cuando acabe el juego con un mensaje a vuestra elección.
+Poner una cuenta atrás visual que indique cuántos segundos quedan para que termine la ronda de juego.
+Poner un botón de continuar que aparezca al lado de "empezar" y solamente cuando acabe el juego y que te permita
+empezar otra vez manteniendo la puntuación que tuvieras. Es decir, la idea es que cuando acabe una ronda puedas
+elegir o continuar o empezar de nuevo.
+ */

@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+html{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: black;
+  line-height: 1.5;
+}
+
 button {
   all: unset;
   cursor: pointer;
@@ -22,6 +30,7 @@ button {
 
 .instructions {
   margin-bottom: 40px;
+  font-size: 18px;
 }
 
 .cta {
@@ -126,4 +135,9 @@ button {
 
 .hammer--pressed {
   transform: rotate(-45deg);
+}
+
+#time {
+  padding: 32px;
+  font-size: 24px;
 }
