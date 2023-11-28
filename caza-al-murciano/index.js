@@ -7,7 +7,8 @@ function startGame() {
     'josemi--corner-tl',
     'josemi--corner-tr'
   ];
-  const availableTimers = [1000, 1200, 1500, 2000, 2500, 3000];
+  const availableTimers = [4000];
+  // 1000, 1200, 1500, 2000, 2500, 3000
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -62,21 +63,42 @@ function startGame() {
 const gameTime = 4000;
 const gameTimeSeconds = gameTime / 1000;
 
-const ctaButton = document.querySelector('.cta--start');
+const ctaStart = document.querySelector('.cta--start');
+const ctaContinue = document.querySelector('.cta--continue');
 const timer = document.querySelector('#time')
 
-ctaButton.addEventListener('click', function () {
+
+ctaStart.addEventListener('click', function () {
   startTimer(gameTimeSeconds, timer);
   totalPointsNode.innerText = 0;
   const gameIntervalId = startGame();
-  ctaButton.style.display = 'none';
+  ctaStart.style.display = 'none';
   clearInterval(fireworksIntervalId);
   document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
 
+  setTimeout(() => {
+    clearInterval(gameIntervalId);
+    ctaStart.style.display = 'inline-block';
+    ctaContinue.style.display = 'inline-block';
+    timer.style.display = 'none';
+    fireworks()
+    document.querySelector('.instructions').innerText = '¡Enhorabuena! Has acabado el juego';
+    clearInterval(timerIntervalId);
+  }, gameTime);
+});
+
+ctaContinue.addEventListener('click', function () {
+  startTimer(gameTimeSeconds, timer);
+  const gameIntervalId = startGame();
+  ctaStart.style.display = 'none';
+  ctaContinue.style.display = 'none';
+  clearInterval(fireworksIntervalId);
+  document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
 
   setTimeout(() => {
     clearInterval(gameIntervalId);
-    ctaButton.style.display = 'inline-block';
+    ctaStart.style.display = 'inline-block';
+    ctaContinue.style.display = 'inline-block';
     timer.style.display = 'none';
     fireworks()
     document.querySelector('.instructions').innerText = '¡Enhorabuena! Has acabado el juego';
@@ -142,7 +164,33 @@ function startTimer(duration, display) {
 }
 
 
+/*
+const changesWhenGameStarts = (isStart) => {
+  startTimer(gameTimeSeconds, timer);
+  const gameIntervalId = startGame();
+  ctaStart.style.display = 'none';
+  clearInterval(fireworksIntervalId);
+  document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
 
+  if (isStart === true) {
+    totalPointsNode.innerText = 0;
+  }
+
+  setTimeout(() => {
+    clearInterval(gameIntervalId);
+    ctaStart.style.display = 'inline-block';
+    ctaContinue.style.display = 'inline-block';
+    timer.style.display = 'none';
+    fireworks()
+    document.querySelector('.instructions').innerText = '¡Enhorabuena! Has acabado el juego';
+    clearInterval(timerIntervalId);
+  }, gameTime);
+};
+
+ctaStart.addEventListener('click', changesWhenGameStarts(true));
+
+ctaContinue.addEventListener('click', changesWhenGameStarts(false));
+ */
 
 
 /*

@@ -38,10 +38,17 @@ button {
   border-radius: 8px;
   padding: 18px 36px;
   color: white;
+  font-weight: bold;
 }
 
 .cta--start {
   background: #2c3144;
+}
+
+.cta--continue {
+  color: black;
+  background: #90D78A;
+  display: none;
 }
 
 .josemi {
