@@ -71,6 +71,7 @@ ctaButton.addEventListener('click', function () {
   const gameIntervalId = startGame();
   ctaButton.style.display = 'none';
   clearInterval(fireworksIntervalId);
+  document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
 
 
   setTimeout(() => {
