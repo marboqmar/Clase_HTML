@@ -24,6 +24,13 @@ button {
   overflow: hidden;
 }
 
+.username-input {
+  display: inline-block;
+  padding: 12px 24px;
+  width: 600px;
+  margin: 24px;
+}
+
 #totalPoints {
   font-size: 4em;
 }
@@ -45,10 +52,25 @@ button {
   background: #2c3144;
 }
 
+.cta--start:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .cta--continue {
   color: black;
   background: #90D78A;
   display: none;
+}
+
+.cta--score {
+  background-color: purple;
+  text-decoration: none;
+  margin: 54px;
+}
+
+.buttons {
+  margin: 32px;
 }
 
 .josemi {
