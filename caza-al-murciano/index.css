@@ -29,6 +29,7 @@ button {
   padding: 12px 24px;
   width: 600px;
   margin: 24px;
+  font-size: 18px;
 }
 
 #totalPoints {
