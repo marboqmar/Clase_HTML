@@ -1,3 +1,6 @@
+/*
+    //----> HTML ELEMENTS
+*/
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -5,70 +8,89 @@ html {
     color: black;
     line-height: 1.5;
 }
+
 ul {
     list-style-type: none;
 }
+
 a, a:visited {
     color: black;
     text-decoration: none;
 }
+
 img {
     max-width: 100%;
 }
-.topBar{
+
+/*
+    //-----> LAYOUT
+*/
+
+/* TOPBAR */
+.topBar {
     display: flex;
     padding: 40px 124px;
 }
-    .topBar__logo{
+
+    .topBar__logo {
         min-width: 135px;
         max-width: 135px;
     }
-    .topBar__nav{
+
+    .topBar__nav {
         display: flex;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
     }
-        .topBar__nav a{
+
+        .topBar__nav a {
             color: black;
             display: block;
             text-decoration: none;
             margin: 32px;
             font-weight: bold;
         }
-    .topBar__btn{
+
+    .topBar__btn {
         margin-left: auto;
     }
-.header{
+
+
+    /* HEADER */
+.header {
     display: flex;
     padding: 40px 124px;
     margin: auto;
 }
+
     .header__title {
         font-size: 20px;
         font-weight: normal;
     }
+
     .header__second-title {
         font-size: 36px;
         font-weight: bold;
         min-width: 300px;
     }
+
     .header__image{
         min-width: 687px;
         min-height: 487px;
         max-width: 687px;
         max-height: 487px;
     }
+
     .header__btn{
         display: flex;
     }
-.bg-pink {
-    background-color: #FFD4D0;
-}
+
 .color-red {
     color: red;
 }
-.btn{
+
+.btn, .btn:visited{
     min-width: 127px;
     max-height: 48px;
     line-height: 48px;
@@ -77,12 +99,25 @@ img {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    display: block;
     padding: 2px 24px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
 }
-    .btn--white{
+
+.btn + .btn {
+    margin-left:  24px;
+}
+    .btn--white, .btn--white:visited {
         background-color: white;
         color: black;
         border: 1px solid black;
     }
 
+
+/*
+    //----> UTILITIES
+*/
+.bg-pink {
+    background-color: #FFD4D0;
+}
