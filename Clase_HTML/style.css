@@ -24,65 +24,70 @@ img {
 }
 
 /*
-    //-----> UTILITIES
+    //-----> LAYOUT
 */
 
-.topBar{
+/* TOPBAR */
+.topBar {
     display: flex;
     padding: 40px 124px;
 }
-    .topBar__logo{
+
+    .topBar__logo {
         min-width: 135px;
         max-width: 135px;
     }
-    .topBar__nav{
+
+    .topBar__nav {
         display: flex;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
         gap: 64px;
     }
-        .topBar__nav a{
+
+        .topBar__nav a {
             color: black;
             display: block;
             text-decoration: none;
             font-weight: bold;
         }
-    .topBar__btn{
+
+    .topBar__btn {
         margin-left: auto;
     }
 
-.header{
+
+/* HEADER */
+.header {
     display: flex;
     padding: 40px 124px;
     margin: auto;
 }
+
     .header__title {
         font-size: 20px;
         font-weight: normal;
     }
+
     .header__second-title {
         font-size: 36px;
         font-weight: bold;
         min-width: 300px;
     }
+
     .header__image{
         min-width: 687px;
         min-height: 487px;
         max-width: 687px;
         max-height: 487px;
     }
+
     .header__btn{
-        /* esto no deberia de hacer falta para que disdisplay: flex;*/
+        display: flex;
     }
 
-
-
-.color-red {
-    color: red;
-}
-
-.btn, .btn:visited {
+.btn, .btn:visited{
     min-width: 127px;
     max-height: 48px;
     line-height: 48px;
@@ -91,13 +96,16 @@ img {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     padding: 2px 24px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
 }
-    .btn--white, .btn:visited{
+
+    .btn--white, .btn--white:visited {
         background-color: white;
         color: black;
-        box-shadow: inset 0 0 0 1px black;
+        box-shadow: inset 0 0 0 0.5px black;
     }
 
     .btn + .btn {
@@ -105,11 +113,12 @@ img {
     }
 
 /*
-    //-----> UTILITIES
+    //----> UTILITIES
 */
 .bg-pink {
     background-color: #FFD4D0;
 }
 
-
-
+.color-red {
+    color: red;
+}
