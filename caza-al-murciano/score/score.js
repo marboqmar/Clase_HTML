@@ -1,11 +1,3 @@
-/*
-<div class="ranking__item">
-    <h3>1</h3>
-    <h3>Pepito</h3>
-    <h3 class="points">3 puntos</h3>
-</div>
- */
-
 const ranking = [
     { position: 1, name: 'pepito', score: 5 },
     { position: 2, name: 'pepito2', score: 4 },
@@ -27,3 +19,5 @@ ranking.forEach(positionInfo => {
 });
 
 rankingNode.innerHTML = rankingHtml;
+
+document.querySelector('.searchBar__input').value
