@@ -94,6 +94,7 @@ const changesWhenGameStarts = (isStart) => {
   ctaContinueNode.style.display = 'none';
   ctaScoreNode.style.display = 'none'
   countDownNode.style.display = 'inline-block';
+  usernameInputNode.style.display = 'none';
   document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
 
   if (fireworksController) {
@@ -111,6 +112,7 @@ const changesWhenGameStarts = (isStart) => {
     ctaContinueNode.style.display = 'inline-block';
     ctaScoreNode.style.display = 'inline-block';
     countDownNode.style.display = 'none';
+    usernameInputNode.style.display = 'inline-block';
     fireworks()
     document.querySelector('.instructions').innerText = '¡Enhorabuena! Has acabado el juego';
     allJosemisNode.forEach((josemi) => {
