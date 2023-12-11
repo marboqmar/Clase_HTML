@@ -1,5 +1,4 @@
 function JosemisHunter() {
-  let gameIntervalId;
   const availableClasses = [
     'josemi--t',
     'josemi--b',
@@ -55,6 +54,8 @@ function JosemisHunter() {
     }, countDownToUse);
   }
 
+  let gameIntervalId;
+
   this.start = () => {
     pickJosemi();
     gameIntervalId = setInterval(pickJosemi, 1000);
@@ -73,7 +74,7 @@ const gameTimeSeconds = gameTime / 1000;
 const allJosemisNode = document.querySelectorAll('.josemi');
 const ctaStartNode = document.querySelector('.cta--start');
 const ctaContinueNode = document.querySelector('.cta--continue');
-const ctaScoreNode = document.querySelector('.cta--score');
+const ctaScoreNode = document.querySelector('.cta--ranking');
 const countDownNode = document.querySelector('#time');
 const usernameInputNode = document.querySelector('.username-input');
 
@@ -187,65 +188,3 @@ usernameInputNode.addEventListener('input', function(event) {
 
 usernameInputNode.value = localStorage.getItem('playerName');
 ctaStartNode.disabled = !usernameInputNode.value;
-
-
-// function startGame() {
-//   const availableClasses = [
-//     'josemi--t',
-//     'josemi--b',
-//     'josemi--corner-bl',
-//     'josemi--corner-br',
-//     'josemi--corner-tl',
-//     'josemi--corner-tr'
-//   ];
-//   const availablecountDowns = [4000];
-//   // 1000, 1200, 1500, 2000, 2500, 3000
-//
-//   function getRandomInt(min, max) {
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
-//   }
-//
-//   function pickJosemi() {
-//     if (!availableClasses.length) {
-//       return;
-//     }
-//
-//     const randomIndex = getRandomInt(0, availableClasses.length - 1);
-//     const randomcountDownIndex = getRandomInt(0, availablecountDowns.length - 1);
-//     const countDownToUse = availablecountDowns[randomcountDownIndex];
-//     const classToUse = availableClasses.splice(randomIndex, 1)[0];
-//     const josemiNode = document.querySelector('.josemi:not(.josemi--selected)');
-//
-//     if (!josemiNode) {
-//       return;
-//     }
-//
-//     josemiNode.classList.add('josemi--selected');
-//     josemiNode.classList.add(classToUse);
-//
-//     const clickListener = josemiNode.addEventListener('click', () => {
-//       josemiNode.classList.remove('josemi--show');
-//     });
-//
-//     setTimeout(() => {
-//       josemiNode.classList.add('josemi--show');
-//     }, 400);
-//
-//     setTimeout(() => {
-//       josemiNode.classList.remove('josemi--show');
-//
-//       setTimeout(() => {
-//         josemiNode.classList.remove('josemi--selected');
-//         josemiNode.classList.remove(classToUse);
-//         availableClasses.push(classToUse);
-//         josemiNode.removeEventListener('click', clickListener);
-//       }, 400);
-//     }, countDownToUse);
-//   }
-//
-//   pickJosemi();
-//
-//   return setInterval(pickJosemi, 1000);
-// }
