@@ -1,4 +1,5 @@
 function JosemisHunter() {
+  let gameIntervalId;
   const availableClasses = [
     'josemi--t',
     'josemi--b',
@@ -54,11 +55,9 @@ function JosemisHunter() {
     }, countDownToUse);
   }
 
-  let gameIntervalId = setInterval(pickJosemi, 1000)
-
   this.start = () => {
     pickJosemi();
-    return gameIntervalId;
+    gameIntervalId = setInterval(pickJosemi, 1000);
   };
 
   this.stop = () => {
