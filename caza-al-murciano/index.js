@@ -1,5 +1,4 @@
 function JosemisHunter() {
-  let gameIntervalId;
   const availableClasses = [
     'josemi--t',
     'josemi--b',
@@ -55,9 +54,11 @@ function JosemisHunter() {
     }, countDownToUse);
   }
 
+  let gameIntervalId = setInterval(pickJosemi, 1000)
+
   this.start = () => {
     pickJosemi();
-    return setInterval(pickJosemi, 1000);
+    return gameIntervalId;
   };
 
   this.stop = () => {
@@ -67,11 +68,6 @@ function JosemisHunter() {
 
 const josemisGame = new JosemisHunter()
 
-
-
-
-
-let fireworksController;
 const gameTime = 4000;
 const gameTimeSeconds = gameTime / 1000;
 
@@ -81,6 +77,15 @@ const ctaContinueNode = document.querySelector('.cta--continue');
 const ctaScoreNode = document.querySelector('.cta--score');
 const countDownNode = document.querySelector('#time');
 const usernameInputNode = document.querySelector('.username-input');
+
+let fireworksController;
+const fireworks = () => {
+  if (!fireworksController) {
+    const container = document.querySelector('.fireworks');
+    fireworksController = new Fireworks.default(container);
+  }
+  fireworksController.start();
+}
 
 const changesWhenGameStarts = (isStart) => {
   startCountdown(gameTimeSeconds, countDownNode);
@@ -123,14 +128,6 @@ ctaStartNode.addEventListener('click', function () {
 ctaContinueNode.addEventListener('click', function () {
   changesWhenGameStarts(false)
 });
-
-const fireworks = () => {
-  if (!fireworksController) {
-    const container = document.querySelector('.fireworks');
-    fireworksController = new Fireworks.default(container);
-  }
-  fireworksController.start();
-}
 
 const totalPointsNode = document.querySelector('#totalPoints');
 
