@@ -10,143 +10,183 @@
         <title>My website</title>
     </head>
     <body>
+        <div class="redCircleAbsolute topBar__circle"></div>
         <div class="topBar bg-pink" id="topBar">
             <div class="topBar__logo">
                 <img src="./pictures/logo.PNG" alt="My logo">
             </div>
-            <nav class="topBar__nav">
+            <nav class="topBar__nav position2">
                 <a href="">About</a>
                 <a href="">Services</a>
                 <a href="">Portfolio</a>
                 <a href="">Blog</a>
             </nav>
-            <a class="btn topBar__btn" href="">Let's Talk</a>
+            <a class="btn" href="">Let's Talk</a>
         </div>
-        <header class="header bg-pink">
-            <div>
-                <h1 class="header__title">UX Designer</h1>
-                <h2 class="header__second-title">Hi There, <span class="color-red">I'm Sarah Jones</span></h2>
-                <p>Welcome to my portfolio of captivating digital experiences. Explore my work and let's create something extraordinary together.</p>
-                <div class="header__btn">
-                    <a class="btn" href="">Hire Me</a>
-                    <a class="btn btn--white" href="">Portfolio</a>
+        <header class="bg-pink">
+            <div class="header">
+                <div class="header__text">
+                    <h1 class="header__title">UX Designer</h1>
+                    <h2 class="header__second-title">Hi There, I'm<span class="color-red"> Sarah Jones</span></h2>
+                    <p>Welcome to my portfolio of captivating digital experiences. Explore my work and let's create something extraordinary together.</p>
+                    <div class="header__btn">
+                        <a class="btn" href="">Hire Me</a>
+                        <a class="btn btn--white" href="">Portfolio</a>
+                    </div>
                 </div>
+                <img class="header__image" src="./pictures/sarah.png" alt="Sarah Jones UX Designer">
             </div>
-            <img class="header__image" src="./pictures/sarah.png" alt="Sarah Jones UX Designer">
         </header>
-        <section class="section1">
-            <h3 class='section__title'>About Me</h3>
+        <section class="section bg-black position-2">
+            <h3 class="section__title">About Me</h3>
             <p class='section__paragraph'>I'm Sarah Jones, a UI/UX designer dedicated to crafting intuitive and visually stunning digital experiences. With a passion for user-centric design. I transform ideas into functional and beautiful interfaces. Let's collaborate and shape the future of design together.</p>
-            <dl>
-                <dt>502</dt>
-                <dd>Projects Done</dd>
-                <dt>10+</dt>
-                <dd>Years of Experience</dd>
-                <dt>273+</dt>
-                <dd>Clients Served</dd>
-            </dl>
+            <div class="aboutMe__list">
+                <dl>
+                    <dt class="aboutMe__list__term">502</dt>
+                    <dd class="aboutMe__list__definition">Projects Done</dd>
+                </dl>
+                <dl class="aboutMe__list__middleItem">
+                    <dt class="aboutMe__list__term">10+</dt>
+                    <dd class="aboutMe__list__definition">Years of Experience</dd>
+                </dl>
+                <dl>
+                    <dt class="aboutMe__list__term">273+</dt>
+                    <dd class="aboutMe__list__definition">Clients Served</dd>
+                </dl>
+            </div>
         </section>
-        <section>
-            <h3 class='section__title'>Services</h3>
+        <section class="section positionRelative">
+<!--            <div class="redCircleAbsolute services__circle"></div>-->
+            <h3 class="section__title">Services</h3>
             <p class='section__paragraph'>Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together</p>
-            <ul>
+            <ul class="services__list">
                 <li>
                     <img src="./pictures/star_icon.png" alt="Star">
-                    <h4>Design</h4>
+                    <h4 class="services__list__h4">Design</h4>
                     <p>I Specialize in web development and design, creating visually appealing, user-friendly digital experiences</p>
                 </li>
                 <li>
                     <img src="./pictures/branding.PNG" alt="Branding">
-                    <h4>Branding</h4>
+                    <h4 class="services__list__h4">Branding</h4>
                     <p>I'm branding expert, crafting unique visual identities that tell your story and resonate with your audience</p>
                 </li>
                 <li>
                     <img src="./pictures/search.png" alt="Search">
-                    <h4>UX Research</h4>
+                    <h4 class="services__list__h4">UX Research</h4>
                     <p>I specialize in user experience research, collaborating on web development, and ensuring user-friendly digital products.</p>
                 </li>
                 <li>
                     <img src="./pictures/usability_testing.PNG" alt="Usability testing">
-                    <h4>Usability Testing</h4>
+                    <h4 class="services__list__h4">Usability Testing</h4>
                     <p>I perform usability testing and optimize designs websites based on real user feedback for seamless interactions</p>
                 </li>
             </ul>
         </section>
-        <section>
-            <h3 class='section__title'>My Portfolio</h3>
-            <p>Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together.</p>
-            <ul>
+        <section class="section bg-pinkAndWhite">
+            <h3 class="section__title">My Portfolio</h3>
+            <p class="myPortfolio__paragraph">Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together.</p>
+            <ul class="myPortfolio__list">
                 <li>
                     <img src="./pictures/educational_platform.jpg" alt="Educational Platform">
-                    <a href="">Educational Platform</a>
-                    <p>Web Design/Usability Testing</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Educational Platform</a>
+                            <p>Web Design/Usability Testing</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
                 <li>
                     <img src="./pictures/travel_app.jpg" alt="Travel App">
-                    <a href="">Travel App Design</a>
-                    <p>UX Research/App Design</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Travel App Design</a>
+                            <p>UX Research/App Design</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
                 <li>
                     <img src="./pictures/personal_page.jpg" alt="Personal Page">
-                    <a href="">Personal Page</a>
-                    <p>Web Design</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Personal Page</a>
+                            <p>Web Design</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
+            </ul>
+            <ul class="myPortfolio__list">
                 <li>
                     <img src="./pictures/furniture_app.jpg" alt="Furniture App">
-                    <a href="">Furniture Mobile App</a>
-                    <p>App Design</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Furniture Mobile App</a>
+                            <p>App Design</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
                 <li>
                     <img src="./pictures/coffee.jpg" alt="Coffee">
-                    <a href="">Coffee House</a>
-                    <p>UX Research/Web Design</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Coffee House</a>
+                            <p>UX Research/Web Design</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
                 <li>
                     <img src="./pictures/home_services.jpg" alt="Home Services">
-                    <a href="">Home Services Page</a>
-                    <p>Web Design/Marketing</p>
-                    <img src="./pictures/arrow.PNG" alt="Arrow">
+                    <div class="myPortfolio__textAndIcon">
+                        <div class="myPortfolio__text">
+                            <a href="">Home Services Page</a>
+                            <p>Web Design/Marketing</p>
+                        </div>
+                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                    </div>
                 </li>
             </ul>
         </section>
-        <section>
-            <h3 class='section__title'>Core Design Skills</h3>
+        <section class="section spacing26px">
+            <h3 class="section__title">Core Design Skills</h3>
             <p>I excel in essential design skills, creating visually stunning and functional digital experiences. </p>
-            <ul>
-                <li>
-                    <label for="interactiondesign">Interaction Design</label>
-                    <progress id="interactiondesign" max="100" value="60"></progress>
-                </li>
-                <li>
-                    <label for="usabilitytesting">Usability Testing</label>
-                    <progress id="usabilitytesting" max="100" value="70"></progress>
-                </li>
-                <li>
-                    <label for="userresearch">User Research</label>
-                    <progress id="userresearch" max="100" value="45"></progress>
-                </li>
-                <li>
-                    <label for="figma">Figma</label>
-                    <progress id="figma" max="100" value="95"></progress>
-                </li>
-                <li>
-                    <label for="prototyping">Prototyping</label>
-                    <progress id="prototyping" max="100" value="80"></progress>
-                </li>
-                <li>
-                    <label for="informationarchitecture">Information Architecture</label>
-                    <progress id="informationarchitecture" max="100" value="50"></progress>
-                </li>
-            </ul>
+            <div class="coreDesignSkills__list">
+                <ul>
+                    <li>
+                        <label for="interactiondesign">Interaction Design</label>
+                        <progress id="interactiondesign" max="100" value="60"></progress>
+                    </li>
+                    <li>
+                        <label for="usabilitytesting">Usability Testing</label>
+                        <progress id="usabilitytesting" max="100" value="70"></progress>
+                    </li>
+                    <li>
+                        <label for="userresearch">User Research</label>
+                        <progress id="userresearch" max="100" value="45"></progress>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="figma">Figma</label>
+                        <progress id="figma" max="100" value="95"></progress>
+                    </li>
+                    <li>
+                        <label for="prototyping">Prototyping</label>
+                        <progress id="prototyping" max="100" value="80"></progress>
+                    </li>
+                    <li>
+                        <label for="informationarchitecture">Information Architecture</label>
+                        <progress id="informationarchitecture" max="100" value="50"></progress>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section>
+        <section class="section bg-pink">
             <div>
-                <h3 class='section__title'>Get in Touch</h3>
+                <h3 class="section__title">Get in Touch</h3>
                 <p>Have a question or a project in mind? I'd love to hear from you. Let's chat and make something amazing together.</p>
                 <dl>
                     <dt><img src="./pictures/phone.PNG" alt="Phone"></dt>
@@ -175,7 +215,7 @@
                 <button>Send Message</button>
             </form>
         </section>
-        <footer>
+        <footer class="bg-black">
             <div>
                 <a href="">About</a>
                 <a href="">Services</a>

@@ -133,15 +133,24 @@ ctaContinueNode.addEventListener('click', function () {
 
 const totalPointsNode = document.querySelector('#totalPoints');
 
+let totalPoints = 0;
+
+let usernameAndPoints = {};
+
+usernameAndPoints.name = usernameInputNode.value;
+
 document.querySelectorAll('.josemi').forEach((josemiNode) => {
   josemiNode.addEventListener('click', () => {
     const pointsToAdd = josemiNode.classList.contains('josemi--sm') ? 2 : 1;
 
-    let totalPoints = Number(totalPointsNode.innerText) + pointsToAdd;
+    totalPoints = Number(totalPointsNode.innerText) + pointsToAdd;
 
     totalPointsNode.innerText = totalPoints;
+
+    usernameAndPoints.points = totalPoints;
   });
 });
+
 
 const hammerNode = document.querySelector('.hammer');
 
@@ -188,5 +197,9 @@ usernameInputNode.addEventListener('input', function(event) {
   ctaStartNode.disabled = !event.target.value;
 });
 
-usernameInputNode.value = localStorage.getItem('playerName');
 ctaStartNode.disabled = !usernameInputNode.value;
+
+export default usernameAndPoints;
+
+
+

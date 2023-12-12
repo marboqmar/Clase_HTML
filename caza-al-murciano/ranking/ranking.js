@@ -1,3 +1,5 @@
+// import usernameAndPoints from "../index";
+
 const ranking = [
     { position: 1, name: 'pepito', score: 5 },
     { position: 2, name: 'pepito2', score: 4 },
