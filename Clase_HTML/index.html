@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <title>My website</title>
+        <title>My Portfolio</title>
     </head>
     <body>
         <div class="redCircleAbsolute topBar__circle"></div>
@@ -15,7 +15,7 @@
             <div class="topBar__logo">
                 <img src="./pictures/logo.PNG" alt="My logo">
             </div>
-            <nav class="topBar__nav position2">
+            <nav class="topBar__nav index1">
                 <a href="">About</a>
                 <a href="">Services</a>
                 <a href="">Portfolio</a>
@@ -23,21 +23,20 @@
             </nav>
             <a class="btn" href="">Let's Talk</a>
         </div>
-        <header class="bg-pink">
-            <div class="header">
-                <div class="header__text">
-                    <h1 class="header__title">UX Designer</h1>
-                    <h2 class="header__second-title">Hi There, I'm<span class="color-red"> Sarah Jones</span></h2>
-                    <p>Welcome to my portfolio of captivating digital experiences. Explore my work and let's create something extraordinary together.</p>
-                    <div class="header__btn">
-                        <a class="btn" href="">Hire Me</a>
-                        <a class="btn btn--white" href="">Portfolio</a>
-                    </div>
+        <header class="bg-pink header">
+            <div class="header__text">
+                <h1 class="header__title">UX Designer</h1>
+                <h2 class="header__second-title">Hi There, I'm<span class="color-red"> Sarah Jones</span></h2>
+                <p>Welcome to my portfolio of captivating digital experiences. Explore my work and let's create something extraordinary together.</p>
+                <div class="header__btn">
+                    <a class="btn" href="">Hire Me</a>
+                    <a class="btn btn--white" href="">Portfolio</a>
                 </div>
-                <img class="header__image" src="./pictures/sarah.png" alt="Sarah Jones UX Designer">
             </div>
+            <img class="header__image" src="./pictures/sarah.png" alt="Sarah Jones UX Designer">
         </header>
-        <section class="section bg-black position-2">
+        <section class="section bg-black index1 positionRelative">
+            <div class="redCircleAbsolute aboutMe__circle"></div>
             <h3 class="section__title">About Me</h3>
             <p class='section__paragraph'>I'm Sarah Jones, a UI/UX designer dedicated to crafting intuitive and visually stunning digital experiences. With a passion for user-centric design. I transform ideas into functional and beautiful interfaces. Let's collaborate and shape the future of design together.</p>
             <div class="aboutMe__list">
@@ -55,8 +54,7 @@
                 </dl>
             </div>
         </section>
-        <section class="section positionRelative">
-<!--            <div class="redCircleAbsolute services__circle"></div>-->
+        <section class="section index1 positionRelative">
             <h3 class="section__title">Services</h3>
             <p class='section__paragraph'>Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together</p>
             <ul class="services__list">
@@ -82,7 +80,7 @@
                 </li>
             </ul>
         </section>
-        <section class="section bg-pinkAndWhite">
+        <section class="section bg-pinkAndLightGrey">
             <h3 class="section__title">My Portfolio</h3>
             <p class="myPortfolio__paragraph">Explore my design services, from user interface and experience to prototyping and testing. Let's craft exceptional digital experiences together.</p>
             <ul class="myPortfolio__list">
@@ -93,7 +91,7 @@
                             <a href="">Educational Platform</a>
                             <p>Web Design/Usability Testing</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
                 <li>
@@ -103,7 +101,7 @@
                             <a href="">Travel App Design</a>
                             <p>UX Research/App Design</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
                 <li>
@@ -113,7 +111,7 @@
                             <a href="">Personal Page</a>
                             <p>Web Design</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
             </ul>
@@ -125,7 +123,7 @@
                             <a href="">Furniture Mobile App</a>
                             <p>App Design</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
                 <li>
@@ -135,7 +133,7 @@
                             <a href="">Coffee House</a>
                             <p>UX Research/Web Design</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
                 <li>
@@ -145,90 +143,115 @@
                             <a href="">Home Services Page</a>
                             <p>Web Design/Marketing</p>
                         </div>
-                        <img src="./pictures/arrow.PNG" alt="Arrow">
+                        <img class="myPortfolio__arrow" src="./pictures/arrow.PNG" alt="Arrow">
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="section spacing26px">
+        <section class="section spacing90px bg-lightGrey">
             <h3 class="section__title">Core Design Skills</h3>
             <p>I excel in essential design skills, creating visually stunning and functional digital experiences. </p>
             <div class="coreDesignSkills__list">
                 <ul>
                     <li>
                         <label for="interactiondesign">Interaction Design</label>
-                        <progress id="interactiondesign" max="100" value="60"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="interactiondesign" max="100" value="60"></progress>
+                            <p class="progress__paragraph">60%</p>
+                        </div>
                     </li>
                     <li>
                         <label for="usabilitytesting">Usability Testing</label>
-                        <progress id="usabilitytesting" max="100" value="70"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="usabilitytesting" max="100" value="70"></progress>
+                            <p class="progress__paragraph">70%</p>
+                        </div>
                     </li>
                     <li>
                         <label for="userresearch">User Research</label>
-                        <progress id="userresearch" max="100" value="45"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="userresearch" max="100" value="45"></progress>
+                            <p class="progress__paragraph">45%</p>
+                        </div>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <label for="figma">Figma</label>
-                        <progress id="figma" max="100" value="95"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="figma" max="100" value="95"></progress>
+                            <p class="progress__paragraph">95%</p>
+                        </div>
                     </li>
                     <li>
                         <label for="prototyping">Prototyping</label>
-                        <progress id="prototyping" max="100" value="80"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="prototyping" max="100" value="80"></progress>
+                            <p class="progress__paragraph">80%</p>
+                        </div>
                     </li>
                     <li>
                         <label for="informationarchitecture">Information Architecture</label>
-                        <progress id="informationarchitecture" max="100" value="50"></progress>
+                        <div class="progressAndPercentage">
+                            <progress id="informationarchitecture" max="100" value="50"></progress>
+                            <p class="progress__paragraph">50%</p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="section bg-pink">
-            <div>
+        <section class="section bg-pink positionRelative getInTouch">
+            <div class="getInTouch__circle redCircleAbsolute"></div>
+            <div class="getInTouch__margin positionRelative">
                 <h3 class="section__title">Get in Touch</h3>
-                <p>Have a question or a project in mind? I'd love to hear from you. Let's chat and make something amazing together.</p>
+                <p class="getInTouch__paragraph">Have a question or a project in mind? I'd love to hear from you. Let's chat and make something amazing together.</p>
                 <dl>
-                    <dt><img src="./pictures/phone.PNG" alt="Phone"></dt>
-                    <dd>+1205 5872 321</dd>
-                    <dt><img src="./pictures/email.PNG" alt="Email"></dt>
-                    <dd>contact@sarajonesdesign.com</dd>
-                    <dt><img src="./pictures/address.PNG" alt="Address"></dt>
-                    <dd>1234 Design Street,Creativeville, Webland,Imaginary State, 98765</dd>
+                    <div class="getInTouch__list">
+                        <dt><img src="./pictures/phone.PNG" alt="Phone"></dt>
+                        <dd>+1205 5872 321</dd>
+                    </div>
+                    <div class="getInTouch__list">
+                        <dt><img src="./pictures/email.PNG" alt="Email"></dt>
+                        <dd>contact@sarajonesdesign.com</dd>
+                    </div>
+                    <div class="getInTouch__list">
+                        <dt><img src="./pictures/address.PNG" alt="Address"></dt>
+                        <dd>1234 Design Street,Creativeville, Webland,Imaginary State, 98765</dd>
+                    </div>
                 </dl>
-                <div>
-                <a href="">Twitter</a>
-                <a href="">Instagram</a>
-                <a href="">Dribbble</a>
-                <a href="">Facebook</a>
+                <div class="getInTouch__socialMedia">
+                    <a href=""><img src="./pictures/twitter.PNG" alt="Twitter"></a>
+                    <a href=""><img src="./pictures/instagram.PNG" alt="Instagram"></a>
+                    <a href=""><img src="./pictures/dribble.PNG" alt="Dribble"></a>
+                    <a href=""><img src="./pictures/facebook.PNG" alt="Facebook"></a>
                 </div>
             </div>
-            <form action="">
-                <label for="name">First name and surname/s</label>
+            <form class="getInTouch__margin getInTouch__form" action="">
+                <label for="name">First name and surname/s:</label>
                 <input id="name" type="text" placeholder="Jon Doe"/>
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input id="email" type="email" placeholder="jon@doe.com"/>
-                <label for="phoneNumber">Phone number</label>
+                <label for="phoneNumber">Phone number:</label>
                 <input id="phoneNumber" type="tel" placeholder="666 666 666"/>
-                <label for="yourMessage">Your message</label>
-                <textarea id="yourMessage" maxlength="300" cols="30" rows="10"></textarea>
+                <label for="yourMessage">Your message:</label>
+                <textarea id="yourMessage" placeholder="Your message" maxlength="300" cols="30" rows="10"></textarea>
                 <button>Send Message</button>
             </form>
         </section>
         <footer class="bg-black">
-            <div>
-                <a href="">About</a>
+            <div class="footer__nav">
+                <a href="" class="footer__nav__item--padding">About</a>
                 <a href="">Services</a>
-                <a href="#topBar">Footer logo</a>
-                <a href="">Portfolio</a>
+                <a href="#topBar" class="footer__logo"><img src="./pictures/footer-logo.PNG" alt="Dark Logo"></a>
+                <a href="" class="footer__nav__item--padding">Portfolio</a>
                 <a href="">Blog</a>
             </div>
-            <a href="">Follow me on social media:</a>
-            <div>
-                <a href="">Twitter</a>
-                <a href="">Instagram</a>
-                <a href="">Dribbble</a>
-                <a href="">Facebook</a>
+            <p class="footer__paragraph">Follow me on social media:</p>
+            <div class="footer__socialMedia">
+                <a href=""><img src="./pictures/footer-twitter.PNG" alt="White Twitter"></a>
+                <a href=""><img src="./pictures/footer-instagram.PNG" alt="Whtie Instagram"></a>
+                <a href=""><img src="./pictures/footer-dribble.PNG" alt="White Dribble"></a>
+                <a href=""><img src="./pictures/footer-facebook.PNG" alt="White Facebook"></a>
             </div>
         </footer>
     </body>
