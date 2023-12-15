@@ -77,6 +77,7 @@ const ctaContinueNode = document.querySelector('.cta--continue');
 const ctaRankingNode = document.querySelector('.cta--ranking');
 const countDownNode = document.querySelector('#time');
 const usernameInputNode = document.querySelector('.username-input');
+const totalPointsNode = document.querySelector('#totalPoints');
 
 let fireworksController;
 const fireworks = () => {
@@ -107,6 +108,7 @@ const changesWhenGameStarts = (isStart) => {
   }
 
   setTimeout(() => {
+    localStorage.setItem('playerScore', totalPointsNode.innerText);
     josemisGame.stop();
     ctaStartNode.style.display = 'inline-block';
     ctaContinueNode.style.display = 'inline-block';
@@ -130,8 +132,6 @@ ctaStartNode.addEventListener('click', function () {
 ctaContinueNode.addEventListener('click', function () {
   changesWhenGameStarts(false)
 });
-
-const totalPointsNode = document.querySelector('#totalPoints');
 
 document.querySelectorAll('.josemi').forEach((josemiNode) => {
   josemiNode.addEventListener('click', () => {

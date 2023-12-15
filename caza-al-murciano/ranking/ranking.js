@@ -1,3 +1,9 @@
+const playerName = localStorage.getItem("playerName");
+
+const playerScore = localStorage.getItem("playerScore");
+
+const newPlayer = {name: playerName, score: Number(playerScore)};
+
 const ranking = [
     { name: 'pepito', score: 1 },
     { name: 'pepito2', score: 2 },
@@ -5,6 +11,12 @@ const ranking = [
     { name: 'pepito4', score: 4 },
     { name: 'pepito5', score: 5 },
 ]
+
+const index = ranking.findIndex(player => player.name === newPlayer.name);
+
+if (index === -1) {
+    ranking.push(newPlayer);
+}
 
 const orderedRanking = _.orderBy(ranking, ['score'], ['desc'])
 
@@ -23,4 +35,5 @@ orderedRanking.forEach(positionInfo => {
 rankingNode.innerHTML = rankingHtml;
 
 document.querySelector('.searchBar__input').value
+
 
