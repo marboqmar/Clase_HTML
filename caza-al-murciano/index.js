@@ -74,7 +74,7 @@ const gameTimeSeconds = gameTime / 1000;
 const allJosemisNode = document.querySelectorAll('.josemi');
 const ctaStartNode = document.querySelector('.cta--start');
 const ctaContinueNode = document.querySelector('.cta--continue');
-const ctaScoreNode = document.querySelector('.cta--ranking');
+const ctaRankingNode = document.querySelector('.cta--ranking');
 const countDownNode = document.querySelector('#time');
 const usernameInputNode = document.querySelector('.username-input');
 
@@ -92,7 +92,7 @@ const changesWhenGameStarts = (isStart) => {
   josemisGame.start();
   ctaStartNode.style.display = 'none';
   ctaContinueNode.style.display = 'none';
-  ctaScoreNode.style.display = 'none'
+  ctaRankingNode.style.display = 'none'
   countDownNode.style.display = 'inline-block';
   usernameInputNode.style.display = 'none';
   document.querySelector('.instructions').innerText = 'Cada vez que veas una versión de Josemi, dale con el ratón para sumar un punto. Los josemis soleados valen doble!';
@@ -110,7 +110,7 @@ const changesWhenGameStarts = (isStart) => {
     josemisGame.stop();
     ctaStartNode.style.display = 'inline-block';
     ctaContinueNode.style.display = 'inline-block';
-    ctaScoreNode.style.display = 'inline-block';
+    ctaRankingNode.style.display = 'inline-block';
     countDownNode.style.display = 'none';
     usernameInputNode.style.display = 'inline-block';
     fireworks()
@@ -133,12 +133,6 @@ ctaContinueNode.addEventListener('click', function () {
 
 const totalPointsNode = document.querySelector('#totalPoints');
 
-let totalPoints = 0;
-
-let usernameAndPoints = {};
-
-usernameAndPoints.name = usernameInputNode.value;
-
 document.querySelectorAll('.josemi').forEach((josemiNode) => {
   josemiNode.addEventListener('click', () => {
     const pointsToAdd = josemiNode.classList.contains('josemi--sm') ? 2 : 1;
@@ -146,8 +140,6 @@ document.querySelectorAll('.josemi').forEach((josemiNode) => {
     totalPoints = Number(totalPointsNode.innerText) + pointsToAdd;
 
     totalPointsNode.innerText = totalPoints;
-
-    usernameAndPoints.points = totalPoints;
   });
 });
 
@@ -199,7 +191,6 @@ usernameInputNode.addEventListener('input', function(event) {
 
 ctaStartNode.disabled = !usernameInputNode.value;
 
-export default usernameAndPoints;
 
 
 
