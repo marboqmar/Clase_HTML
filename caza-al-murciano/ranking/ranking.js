@@ -9,13 +9,25 @@ const ranking = [
     { name: 'pepito2', score: 2 },
     { name: 'pepito3', score: 3 },
     { name: 'pepito4', score: 4 },
-    { name: 'pepito5', score: 5 },
+    { name: 'marta', score: 1 },
 ]
 
 const index = ranking.findIndex(player => player.name === newPlayer.name);
 
 if (index === -1) {
     ranking.push(newPlayer);
+} else {
+    let existingPlayer = ranking.filter(function (player) {
+       return player.name === newPlayer.name
+    });
+    if (existingPlayer[0].score < newPlayer.score) {
+        ranking.forEach(user => {
+            console.log(user.name)
+            if (user.name === newPlayer.name) {
+                user.score = newPlayer.score;
+            }
+        });
+    }
 }
 
 const orderedRanking = _.orderBy(ranking, ['score'], ['desc'])
@@ -35,5 +47,4 @@ orderedRanking.forEach(positionInfo => {
 rankingNode.innerHTML = rankingHtml;
 
 document.querySelector('.searchBar__input').value
-
 

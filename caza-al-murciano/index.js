@@ -68,7 +68,7 @@ function JosemisHunter() {
 
 const josemisGame = new JosemisHunter()
 
-const gameTime = 4000;
+const gameTime = 10000;
 const gameTimeSeconds = gameTime / 1000;
 
 const allJosemisNode = document.querySelectorAll('.josemi');
