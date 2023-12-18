@@ -141,11 +141,12 @@ img {
         margin-left: auto;
     }
 
+  
+
 .aboutMe__circle {
     height: 234px;
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
-    z-index: -1;
 }
 
 /* Services */
@@ -438,4 +439,9 @@ footer {
 
 .spacing90px {
     padding: 90px 0;
+}
+
+.overflowposition {
+    overflow: hidden;
+
 }
