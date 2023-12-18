@@ -1,10 +1,10 @@
 const playerName = localStorage.getItem("playerName");
-
 const playerScore = localStorage.getItem("playerScore");
-
 const newPlayer = {name: playerName, score: Number(playerScore)};
+const previousRankingJson = localStorage.getItem("currentRanking");
 
-const ranking = [
+
+const ranking = previousRankingJson ? JSON.parse(previousRankingJson) : [
     { name: 'pepito', score: 1 },
     { name: 'pepito2', score: 2 },
     { name: 'pepito3', score: 3 },
@@ -22,7 +22,6 @@ if (index === -1) {
     });
     if (existingPlayer[0].score < newPlayer.score) {
         ranking.forEach(user => {
-            console.log(user.name)
             if (user.name === newPlayer.name) {
                 user.score = newPlayer.score;
             }
@@ -31,6 +30,8 @@ if (index === -1) {
 }
 
 const orderedRanking = _.orderBy(ranking, ['score'], ['desc'])
+
+localStorage.setItem("currentRanking", JSON.stringify(orderedRanking));
 
 const rankingNode = document.querySelector('#ranking');
 let rankingHtml = '';
