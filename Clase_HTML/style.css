@@ -146,9 +146,6 @@ img {
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
 }
-.overflowH{
-    overflow: hidden;
-}
 
 /* Services */
 .services__list {
@@ -437,4 +434,8 @@ footer {
 
 .spacing90px {
     padding: 90px 0;
+}
+
+.overflowHidden {
+    overflow: hidden;
 }
