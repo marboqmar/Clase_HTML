@@ -105,6 +105,8 @@ img {
     padding: 64px calc((100% - 1200px)/2) 64px calc((100% - 1200px)/2);
     text-align: center;
     background-color: white;
+    position: relative;
+    overflow: hidden;
 }
 
     .section__title {
