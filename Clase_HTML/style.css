@@ -119,6 +119,15 @@ img {
         margin-left: auto;
     }
 
+    .overflow1 {
+        overflow: hidden;
+    }
+    
+    .overflow2 {
+        position: relative;
+        overflow: hidden;
+    }
+
 /* About Me */
 .aboutMe__list {
     display: flex;
@@ -146,6 +155,9 @@ img {
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
 }
+
+
+
 
 /* Services */
 .services__list {
