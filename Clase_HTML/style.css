@@ -106,7 +106,6 @@ img {
     text-align: center;
     background-color: white;
     position: relative;
-    overflow: hidden;
 }
 
     .section__title {
@@ -147,7 +146,6 @@ img {
     height: 234px;
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
-    z-index: -1;
 }
 
 /* Services */
@@ -436,6 +434,10 @@ footer {
 
 .index1 {
     z-index: 1
+}
+
+.overflowHidden {
+    overflow: hidden;
 }
 
 .spacing90px {
