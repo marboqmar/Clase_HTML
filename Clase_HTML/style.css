@@ -145,7 +145,6 @@ img {
     height: 234px;
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
-    z-index: -1;
 }
 
 /* Services */
