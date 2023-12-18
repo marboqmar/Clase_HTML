@@ -439,3 +439,7 @@ footer {
 .spacing90px {
     padding: 90px 0;
 }
+
+.overflow {
+    overflow: hidden;
+}
