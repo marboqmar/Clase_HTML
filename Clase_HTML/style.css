@@ -145,7 +145,6 @@ img {
     height: 234px;
     width: 234px;
     inset: 450px auto auto calc(50% - 234px / 2);
-    z-index: -1;
 }
 
 /* Services */
@@ -405,7 +404,7 @@ footer {
 .bg-pinkAndLightGrey {
     background: rgb(255,212,208);
     background: linear-gradient(180deg, rgba(255,212,208
-    ,1) 34%, rgba(247,247,247,1) 34%);
+    ,1) 34%, rgba(247,247,247,1) 34%); 
 }
 
 .bg-black {
@@ -439,6 +438,6 @@ footer {
 .spacing90px {
     padding: 90px 0;
 }
-.overflow {
+.overflowHidden {
     overflow: hidden;
 }
