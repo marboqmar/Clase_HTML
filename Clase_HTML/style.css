@@ -432,9 +432,11 @@ footer {
     position: relative;
 }
 
+/*
 .index1 {
     z-index: 1
 }
+*/
 
 .spacing90px {
     padding: 90px 0;
