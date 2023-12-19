@@ -64,7 +64,6 @@ img {
             font-weight: bold;
         }
 
-
 /* HEADER */
 .header {
     display: flex;
@@ -144,7 +143,7 @@ img {
 .aboutMe__circle {
     height: 234px;
     width: 234px;
-    inset: 450px auto auto calc(50% - 234px / 2);
+    inset: auto auto -186px calc(50% - 234px / 2);
 }
 
 /* Services */
@@ -328,6 +327,7 @@ img {
         font-size: 16px;
         font-weight: bold;
         padding: 12px 56px;
+        cursor: pointer;
     }
 
 /* FOOTER */
@@ -365,12 +365,10 @@ footer {
     .footer__socialMedia a:not(:last-of-type) {
         padding-right: 32px;
     }
-    
-/*
-    //----> UTILITIES
-*/
 
-/* BUTTONS */
+/*
+    //----> BUTTONS
+*/
 .btn, .btn:visited {
     min-width: 127px;
     max-height: 48px;
@@ -395,6 +393,10 @@ footer {
 .btn + .btn {
     margin-left: 24px;
 }
+
+/*
+    //----> UTILITIES
+*/
 
 /* COLOURS */
 .bg-pink {
