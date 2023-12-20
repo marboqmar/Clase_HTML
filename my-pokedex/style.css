@@ -1,0 +1,22 @@
+body {
+  padding: 20px;
+}
+
+.pokemonDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: space-between;
+}
+
+.pokemon {
+  max-width: 150px;
+  padding: 12px;
+}
+
+.pokemonName {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
