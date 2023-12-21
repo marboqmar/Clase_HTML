@@ -1,0 +1,14 @@
+html {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    padding: 20px;
+}
+
+.pokemonDetailsDisplay {
+    text-align: center;
+}

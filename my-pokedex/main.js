@@ -1,22 +1,19 @@
-import axios from 'axios';
-import { capitalize } from 'lodash';
-import { apiUrl, getImage } from "./src/utils.js";
+import { pokemonModifiedData } from "./src/pokemonData.js";
 
-let pokemonModifiedData
 
-axios.get(apiUrl).then((body) => {
-   let pokemonOriginalData = body.data.results;
-   let html = '';
 
-   pokemonOriginalData.forEach((pokemon, index) => {
-      pokemonModifiedData = {...pokemon, id: index + 1, img: getImage(index+1)};
+let html = '';
 
-      html = html + `<div class="pokemon"><a href="/src/pokemonDetails/?pokemonId=${pokemonModifiedData.id}"><p class="pokemonName">${capitalize(pokemonModifiedData.name)}</p><img src="${pokemonModifiedData.img}"></div>`
-   });
-
-   document.querySelector('.pokemonDisplay').innerHTML = html;
+pokemonModifiedData.forEach((pokemon, index) => {
+   console.log(pokemonModifiedData.name)
+   html = html + `<div class="pokemon">
+       <a href="/src/pokemonDetails/pokemonDetails.html?pokemonId=${pokemonModifiedData[index].id}">
+       <p>${pokemonModifiedData[index].name}</p>
+       <img src="${pokemonModifiedData[index].img}">
+    </div>`
 });
 
+document.querySelector('.pokemonDisplay').innerHTML = html;
 
 
 
