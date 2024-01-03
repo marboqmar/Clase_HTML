@@ -4,8 +4,6 @@ async function init () {
    let normalisedPokemonData = await gettingData();
    console.log(normalisedPokemonData)
 
-
-
    const renderPokemon = (pokemonToRender) => {
       let html = '';
       pokemonToRender.forEach((pokemon, index) => {

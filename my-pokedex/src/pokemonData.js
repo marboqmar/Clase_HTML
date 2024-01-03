@@ -16,10 +16,6 @@ async function gettingData() {
     });
 }
 
-// let normalisedPokemonData = await gettingData();
-//
-// export { normalisedPokemonData };
-
 export { gettingData };
 
 
