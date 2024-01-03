@@ -1,4 +1,4 @@
-import  { pokemonModifiedData } from '../pokemonData.js'
+import  { normalisedPokemonData } from '../pokemonData.js'
 import axios from 'axios';
 import { capitalize } from 'lodash';
 
@@ -6,8 +6,8 @@ const searchParams = new URLSearchParams(window.location.search);
 const pokemonId = searchParams.get('pokemonId')
 const pokemonDisplayNode = document.querySelector(".pokemonDetailsDisplay")
 const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-const pokemonName = pokemonModifiedData[pokemonId - 1].name
-const pokemonImage = pokemonModifiedData[pokemonId - 1].img
+const pokemonName = normalisedPokemonData[pokemonId - 1].name
+const pokemonImage = normalisedPokemonData[pokemonId - 1].img
 
 document.querySelector('title').innerHTML = pokemonName
 

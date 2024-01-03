@@ -16,8 +16,10 @@ async function gettingData() {
     });
 }
 
-let pokemonModifiedData = await gettingData();
+// let normalisedPokemonData = await gettingData();
+//
+// export { normalisedPokemonData };
 
-export { pokemonModifiedData };
+export { gettingData };
 
 
