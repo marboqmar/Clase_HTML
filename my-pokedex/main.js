@@ -4,9 +4,10 @@ async function init () {
    let normalisedPokemonData = await gettingData();
    console.log(normalisedPokemonData)
 
-   let html = '';
+
 
    const renderPokemon = (pokemonToRender) => {
+      let html = '';
       pokemonToRender.forEach((pokemon, index) => {
          html = html + `<div class="pokemon">
              <a href="/src/pokemonDetails/pokemonDetails.html?pokemonId=${pokemon.id}">
@@ -22,7 +23,7 @@ async function init () {
 
    document.querySelector('#searchPokemon').addEventListener('input', (event) => {
       const filteredPokemon = normalisedPokemonData.filter((pokemonItem) => {
-         return pokemonItem.name.includes(event.target.value);
+         return pokemonItem.name.toLowerCase().includes(event.target.value);
       });
 
       renderPokemon(filteredPokemon);
@@ -30,7 +31,3 @@ async function init () {
 }
 
 init()
-
-// document.querySelector('body').addEventListener('load', function () {
-//    init();
-// });
