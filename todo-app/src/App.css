@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.topButtons button {
+  width: 160px;
+  margin: 24px;
+}
+
+.line {
+  border: 1px solid white;
+  height: 0;
+  width: 800px;
+  margin-bottom: 32px;
+}
+
+.inputField {
+  width: 400px;
+  padding: 12px 16px;
+  margin-right: 24px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.task {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 24px;
+  padding: 8px 16px;
+}
+
+.checkbox {
+  margin-right: 24px;
+}
+
+.deleteButton {
+  margin-left: auto;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+/*flex-grow: 1;*/
+/*text-align: center;*/
