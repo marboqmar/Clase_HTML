@@ -10,12 +10,12 @@ export const Task = (props) => {
     };
 
     return (
-        <div className={"task displayFlex"}>
-            <div className={"taskText, displayFlex"}>
+        <div className={`task displayFlex ${isTaskCompleted ? 'taskCompleted' : ''}`}>
+            <div className={"taskText displayFlex"}>
                 <input className={"checkbox"} checked={isTaskCompleted} onChange={handleChange} type={"checkbox"}/>
-                <p className={"taskText"}>{text}</p>
+                <p>{text}</p>
             </div>
-            <button className={"deleteButton"} onClick={onDeleteClick}>Delete</button>
+            <button className={"addAndDeleteButtons deleteButtonPaddingAndBG"} onClick={onDeleteClick}>Delete</button>
         </div>
     )
 }

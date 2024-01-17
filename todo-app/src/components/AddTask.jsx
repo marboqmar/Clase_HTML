@@ -22,9 +22,10 @@ export function AddTask(props) {
     return (
         <>
             <div>
-                <input className={"inputField"} type={"text"} placeholder="Escribe algo" value={inputValue} onChange={handleChange}/>
-                <button onClick={handleAddClick} disabled={!inputValue}>Add</button>
+                <input className={"inputField"} type={"text"} placeholder="Escribe el nombre de tu tarea" value={inputValue} onChange={handleChange}/>
+                <button className={"addAndDeleteButtons addButtonPaddingAndBG"} onClick={handleAddClick} disabled={!inputValue}>Add</button>
             </div>
         </>
     )
 }
+

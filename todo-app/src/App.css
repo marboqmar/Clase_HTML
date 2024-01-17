@@ -1,51 +1,130 @@
-#root {
-  max-width: 1280px;
+/*
+    //-----> HTML
+*/
+html {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  background-color: #5789AD;
+  padding: 40px 20px;
+}
+
+button {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  button[disabled] {
+    opacity: 0.9;
+  }
+
+/*
+    //-----> LAYOUT
+*/
+
+/* TOPBAR */
+.topButtons{
+  padding: 0 40px 10px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .topButtons button {
   width: 160px;
-  margin: 24px;
+  padding: 8px 16px;
+  background-color: #222222;
+  border: 1px solid #FFFFFF;
+
 }
 
 .line {
-  border: 1px solid white;
+  border: 1px solid #222222;
   height: 0;
-  width: 800px;
+  max-width: 800px;
   margin-bottom: 32px;
 }
 
+/* TASKS */
 .inputField {
   width: 400px;
   padding: 12px 16px;
   margin-right: 24px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  border: 1px solid white;
+  font-weight: 500;
+  color: black;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  background-color: #96C0DE;
+}
+
+.addAndDeleteButtons{
+  background-color: #3D4347;
+  color: white;
+  border: 1px solid transparent;
   border-radius: 10px;
 }
 
+  .addButtonPaddingAndBG {
+    padding: 10px 20px;
+    background-color: #34393D;
+  }
+
+.deleteButtonPaddingAndBG {
+  padding: 6px 10px;
+  background-color: #3D4347;
+}
+
 .task {
-  border: 1px solid white;
+  background-color: #B1DBF9;
+  color: black;
+  border: 1px solid #FFFFFF;
   border-radius: 10px;
   margin: 24px;
   padding: 8px 16px;
+  align-items: center;
 }
+
+  .taskText {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .taskCompleted {
+    background-color: #5EB55D;
+  }
 
 .checkbox {
   margin-right: 24px;
 }
 
-.deleteButton {
-  margin-left: auto;
-}
+/*
+    //----> UTILITIES
+*/
 
 .displayFlex {
   display: flex;
 }
 
-/*flex-grow: 1;*/
-/*text-align: center;*/
+.topButtons .active {
+  background-color: #985DB5;
+  /*background-color: #A85DB5;*/
+}
