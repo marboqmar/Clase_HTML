@@ -1,10 +1,19 @@
 import './App.css'
-import { Task } from './Task.jsx'
+import { Task } from './components/Task.jsx'
+import { useState } from 'react';
+import { AddTask } from './components/AddTask.jsx'
 
-function App() {
+export function App() {
+    const [tasks, setTasks] = useState([]);
+
+    const handleAddClick = (task) => {
+        setTasks([task, ...tasks])
+    }
+
     const handleDeleteClick = () => {
         alert('delete clicked');
     }
+
     return (
         <>
             <div className={"topButtons"}>
@@ -13,17 +22,12 @@ function App() {
                 <button>Pending</button>
             </div>
             <div className={"line"}></div>
+            <AddTask onAddClick={handleAddClick} />
             <div>
-                <input className={"inputField"} type={"text"} placeholder="Escribe algo"/>
-                <button>Add</button>
+                {tasks.map((task, index) => (
+                    <Task key={index} {...task} onDeleteClick={handleDeleteClick} />
+                ))}
             </div>
-            <div>
-                <Task text={"Hacer la compra"} isCompleted onDeleteClick={handleDeleteClick} />
-                <Task text={"Hacer Katas"} isCompleted={false} onDeleteClick={handleDeleteClick} />
-            </div>
-
         </>
     )
 }
-
-export default App
