@@ -17,7 +17,6 @@ export function AddTask(props) {
 
         setInputValue("")
     }
-    // setTasks([task, ...tasks]);
 
     return (
         <>

@@ -46,8 +46,8 @@ export function App() {
             <div className={"line"}></div>
             <AddTask onAddClick={handleAddClick} />
             <div>
-                {tasks.map((task, index) => (
-                    <Task key={index} {...task} onDeleteClick={handleDeleteClick} />
+                {tasks.map((task) => (
+                    <Task key={`${task.text}${task.index}`} {...task} onDeleteClick={handleDeleteClick} />
                 ))}
             </div>
         </>
