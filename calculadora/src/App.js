@@ -1,7 +1,9 @@
 import './App.scss';
 import { useState } from 'react';
 
-const actions = ['C', '+-', '%', '/', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '=']
+const actions = ['C', '+-', '%', '/', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
+
+const symbols = ['+', '-', 'x', '/', '%'];
 
 function App() {
     const [value, setValue] = useState('0');
@@ -19,13 +21,23 @@ function App() {
 
         if (newValue === '+-') {
             if (!value.startsWith('-')) {
-                let negativeValue = `-${value}`;
-                setValue(negativeValue);
+                setValue(`-${value}`);
             } else {
                 let positiveValue = value.split('-');
                 setValue(positiveValue[1]);
             }
         }
+
+        if (newValue === '+') {
+            let checkLastDigit = value.split('')
+
+            if (symbols.includes(checkLastDigit.slice(-1).toString())) {
+                console.log('symbol not added')
+            } else {
+                setValue(`${value}+`)
+            }
+        }
+
 
         if (typeof newValue !== "number") {
             return;
