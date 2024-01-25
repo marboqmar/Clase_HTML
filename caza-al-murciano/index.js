@@ -68,6 +68,7 @@ function JosemisHunter() {
 
 const josemisGame = new JosemisHunter()
 
+
 const gameTime = 10000;
 const gameTimeSeconds = gameTime / 1000;
 
@@ -190,7 +191,5 @@ usernameInputNode.addEventListener('input', function(event) {
 });
 
 ctaStartNode.disabled = !usernameInputNode.value;
-
-
 
 
