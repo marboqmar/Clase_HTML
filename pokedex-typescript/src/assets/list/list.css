@@ -1,0 +1,33 @@
+html {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    padding: 20px 60px;
+}
+
+.search {
+    width: 400px;
+    height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: space-between;
+}
+
+.pokemon {
+    padding: 12px;
+}
