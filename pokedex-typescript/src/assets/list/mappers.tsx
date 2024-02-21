@@ -6,7 +6,8 @@ export const mapPokemonApiToPokemonView = (pokemon) => {
         return {
             name: capitalize(pokemonItem.name),
             imageUrl: getImage(index + 1),
-            id: index + 1
+            id: index + 1,
+            isFav: true
         };
     });
 };
